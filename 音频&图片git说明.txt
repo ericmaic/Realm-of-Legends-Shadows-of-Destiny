@@ -1,0 +1,7 @@
+音频：
+audio/自己新建文件夹，不放入bgm,bgs,me,se
+
+图片：
+img/自己新建文件夹，或者:
+img/faces
+img/pictures
