@@ -1,0 +1,725 @@
+{
+  "airship": {
+    "bgm": {
+      "name": "Ship3",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    "characterIndex": 3,
+    "characterName": "Vehicle",
+    "startMapId": 0,
+    "startX": 0,
+    "startY": 0
+  },
+  "armorTypes": [
+    "",
+    "通用护甲",
+    "魔法护甲",
+    "轻甲",
+    "重甲",
+    "小盾",
+    "大盾"
+  ],
+  "attackMotions": [
+    {
+      "type": 0,
+      "weaponImageId": 0
+    },
+    {
+      "type": 1,
+      "weaponImageId": 1
+    },
+    {
+      "type": 1,
+      "weaponImageId": 2
+    },
+    {
+      "type": 1,
+      "weaponImageId": 3
+    },
+    {
+      "type": 1,
+      "weaponImageId": 4
+    },
+    {
+      "type": 1,
+      "weaponImageId": 5
+    },
+    {
+      "type": 1,
+      "weaponImageId": 6
+    },
+    {
+      "type": 2,
+      "weaponImageId": 7
+    },
+    {
+      "type": 2,
+      "weaponImageId": 8
+    },
+    {
+      "type": 2,
+      "weaponImageId": 9
+    },
+    {
+      "type": 0,
+      "weaponImageId": 10
+    },
+    {
+      "type": 0,
+      "weaponImageId": 11
+    },
+    {
+      "type": 0,
+      "weaponImageId": 12
+    }
+  ],
+  "battleBgm": {
+    "name": "Conquest",
+    "pan": 0,
+    "pitch": 100,
+    "volume": 90
+  },
+  "battleback1Name": "Grassland",
+  "battleback2Name": "Grassland",
+  "battlerHue": 0,
+  "battlerName": "Dragon",
+  "boat": {
+    "bgm": {
+      "name": "Ship1",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    "characterIndex": 0,
+    "characterName": "Vehicle",
+    "startMapId": 0,
+    "startX": 0,
+    "startY": 0
+  },
+  "currencyUnit": "金",
+  "defeatMe": {
+    "name": "Defeat1",
+    "pan": 0,
+    "pitch": 100,
+    "volume": 90
+  },
+  "editMapId": 1,
+  "elements": [
+    "",
+    "物理",
+    "火",
+    "冰",
+    "雷",
+    "水",
+    "土",
+    "风",
+    "光",
+    "暗"
+  ],
+  "equipTypes": [
+    "",
+    "武器",
+    "盾牌",
+    "头部",
+    "身体",
+    "饰品"
+  ],
+  "gameTitle": "Realm of Legends Shadows of Destiny",
+  "gameoverMe": {
+    "name": "Gameover1",
+    "pan": 0,
+    "pitch": 100,
+    "volume": 90
+  },
+  "locale": "zh_CN",
+  "magicSkills": [
+    1
+  ],
+  "menuCommands": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "optDisplayTp": true,
+  "optDrawTitle": true,
+  "optExtraExp": false,
+  "optFloorDeath": false,
+  "optFollowers": false,
+  "optSideView": true,
+  "optSlipDeath": false,
+  "optTransparent": false,
+  "partyMembers": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "ship": {
+    "bgm": {
+      "name": "Ship2",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    "characterIndex": 1,
+    "characterName": "Vehicle",
+    "startMapId": 0,
+    "startX": 0,
+    "startY": 0
+  },
+  "skillTypes": [
+    "",
+    "魔法",
+    "特技"
+  ],
+  "sounds": [
+    {
+      "name": "Cursor2",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Decision1",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Cancel2",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Buzzer1",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Equip1",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Save",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Load",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Battle1",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Run",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Attack3",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Damage4",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Collapse1",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Collapse2",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Collapse3",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Damage5",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Collapse4",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Recovery",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Miss",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Evasion1",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Evasion2",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Reflection",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Shop1",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Item3",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    },
+    {
+      "name": "Item3",
+      "pan": 0,
+      "pitch": 100,
+      "volume": 90
+    }
+  ],
+  "startMapId": 13,
+  "startX": 1,
+  "startY": 8,
+  "switches": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "ball_1_set",
+    "ball_2_set",
+    "ball_3_set",
+    "ball_4_set",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "terms": {
+    "basic": [
+      "等级",
+      "级",
+      "HP",
+      "HP",
+      "MP",
+      "MP",
+      "TP",
+      "TP",
+      "经验",
+      "经验"
+    ],
+    "commands": [
+      "战斗",
+      "逃跑",
+      "攻击",
+      "防御",
+      "道具",
+      "技能",
+      "装备",
+      "状态",
+      "队形",
+      "存档",
+      "结束游戏",
+      "选项",
+      "武器",
+      "防具",
+      "重要物品",
+      "装备",
+      "最优化",
+      "卸下",
+      "新游戏",
+      "继续",
+      null,
+      "返回标题",
+      "取消",
+      null,
+      "购买",
+      "出售"
+    ],
+    "params": [
+      "最大HP",
+      "最大MP",
+      "攻击",
+      "防御",
+      "魔攻",
+      "魔防",
+      "敏捷",
+      "幸运",
+      "命中",
+      "回避"
+    ],
+    "messages": {
+      "actionFailure": "对%1没有效果！",
+      "actorDamage": "%1受到了%2点伤害！",
+      "actorDrain": "%1的%3被吸收了%2点！",
+      "actorGain": "%1获得了%2点%3！",
+      "actorLoss": "%1失去了%2点%3！",
+      "actorNoDamage": "%1没有受到伤害！",
+      "actorNoHit": "未命中！%1没有受到伤害！",
+      "actorRecovery": "%1恢复了%2点%3！",
+      "alwaysDash": "始终奔跑",
+      "bgmVolume": "BGM音量",
+      "bgsVolume": "BGS音量",
+      "buffAdd": "%1的%2提升了！",
+      "buffRemove": "%1的%2恢复正常了！",
+      "commandRemember": "记忆指令",
+      "counterAttack": "%1发动了反击！",
+      "criticalToActor": "痛击！！",
+      "criticalToEnemy": "会心一击！！",
+      "debuffAdd": "%1的%2降低了！",
+      "defeat": "%1被击败了。",
+      "emerge": "%1出现了！",
+      "enemyDamage": "%1受到了%2点伤害！",
+      "enemyDrain": "%1的%3被吸收了%2点！",
+      "enemyGain": "%1获得了%2点%3！",
+      "enemyLoss": "%1失去了%2点%3！",
+      "enemyNoDamage": "%1没有受到伤害！",
+      "enemyNoHit": "未命中！%1没有受到伤害！",
+      "enemyRecovery": "%1恢复了%2点%3！",
+      "escapeFailure": "但是，逃跑失败了！",
+      "escapeStart": "%1开始逃跑！",
+      "evasion": "%1躲开了攻击！",
+      "expNext": "距下一级%1",
+      "expTotal": "当前%1",
+      "file": "文件",
+      "levelUp": "%1升级到了%2 %3！",
+      "loadMessage": "读取哪个存档？",
+      "magicEvasion": "%1抵消了魔法！",
+      "magicReflection": "%1反射了魔法！",
+      "meVolume": "ME音量",
+      "obtainExp": "获得了%1点%2！",
+      "obtainGold": "获得了%1\\G！",
+      "obtainItem": "获得了%1！",
+      "obtainSkill": "学会了%1！",
+      "partyName": "%1的队伍",
+      "possession": "持有数",
+      "preemptive": "%1先发制人！",
+      "saveMessage": "保存到哪个存档？",
+      "seVolume": "SE音量",
+      "substitute": "%1保护了%2！",
+      "surprise": "%1遭到了奇袭！",
+      "useItem": "%1使用了%2！",
+      "victory": "%1获得了胜利！"
+    }
+  },
+  "testBattlers": [
+    {
+      "actorId": 1,
+      "equips": [
+        1,
+        1,
+        2,
+        3,
+        0
+      ],
+      "level": 1
+    },
+    {
+      "actorId": 2,
+      "equips": [
+        2,
+        1,
+        2,
+        3,
+        0
+      ],
+      "level": 1
+    },
+    {
+      "actorId": 3,
+      "equips": [
+        3,
+        0,
+        2,
+        3,
+        4
+      ],
+      "level": 1
+    },
+    {
+      "actorId": 4,
+      "equips": [
+        4,
+        0,
+        2,
+        3,
+        4
+      ],
+      "level": 1
+    }
+  ],
+  "testTroopId": 3,
+  "title1Name": "Castle",
+  "title2Name": "",
+  "titleBgm": {
+    "name": "03_Wings_to_the_sky",
+    "pan": 0,
+    "pitch": 100,
+    "volume": 90
+  },
+  "variables": [
+    "",
+    "rogue process",
+    "step count",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "Random",
+    "Random",
+    "Random",
+    "Random",
+    "Random",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "ball_1_x",
+    "ball_1_y",
+    "ball_2_x",
+    "ball_2_y",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "versionId": 8079899,
+  "victoryMe": {
+    "name": "Victory1",
+    "pan": 0,
+    "pitch": 100,
+    "volume": 90
+  },
+  "weaponTypes": [
+    "",
+    "匕首",
+    "剑",
+    "连枷",
+    "斧",
+    "鞭",
+    "手杖",
+    "弓",
+    "弩",
+    "枪",
+    "爪",
+    "拳套",
+    "长矛"
+  ],
+  "windowTone": [
+    0,
+    0,
+    0,
+    0
+  ]
+}
