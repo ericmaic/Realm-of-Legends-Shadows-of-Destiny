@@ -105,9 +105,9 @@
         bGuardZone:  Number(p['Boss Guard Zone']          || 32),
         bDodgeZone:  Number(p['Boss Dodge Zone']          || 32),
         bossSpeed:   Number(p['Boss Speed']               || 1.6),
-        guardPos:    Number(p['Guard Zone Position']      || 0.28),
-        dodgePos:    Number(p['Dodge Zone Position']      || 0.72),
-        pgMult:      Number(p['Perfect Guard Multiplier'] || 0.1),
+        guardPos:    Number(p['Guard Zone Position']      || 0.72),
+        dodgePos:    Number(p['Dodge Zone Position']      || 0.28),
+        pgMult:      Number(p['Perfect Guard Multiplier'] || 0.4),
         pdMult:      Number(p['Perfect Dodge Multiplier'] || 0),
     };
 
