@@ -99,7 +99,7 @@
         var subject = this._subject;
         var action  = this._action;
 
-        if (subject && subject.isActor() && action && action.isSkill() && !this._sodQTEDone) {
+        if (subject && subject.isActor() && action && action.isSkill() && !this._sodQTEDone && this._targets.length > 0) {
             var item = action.item();
             // Skip for basic Attack, Guard commands, and <sod_no_qte> tagged skills
             var isAttack  = (item.id === subject.attackSkillId());
