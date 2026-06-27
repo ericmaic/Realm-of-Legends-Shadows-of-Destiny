@@ -71,46 +71,47 @@
     // Initialise before config is loaded
     ConfigManager.language = defaultLang;
 
+    // Files that have language-specific versions under data/lang/{code}/
+    var _langFiles = {
+        'System.json': true
+        // Add more here as translations are created:
+        // 'Actors.json': true, 'Skills.json': true, etc.
+    };
+
     // ============================================================
-    // DataManager – load from data/lang/{code}/ with fallback
+    // DataManager – load from data/lang/{code}/ for known files only
     // ============================================================
     var _DM_loadDataFile = DataManager.loadDataFile;
     DataManager.loadDataFile = function (name, src) {
+        if (!_langFiles[src]) {
+            _DM_loadDataFile.call(this, name, src);
+            return;
+        }
+
         var lang = ConfigManager.language;
-        var langUrl  = 'data/lang/' + lang + '/' + src;
-        var fallUrl  = 'data/' + src;
+        var langUrl = 'data/lang/' + lang + '/' + src;
+        var fallUrl = 'data/' + src;
 
         var xhr = new XMLHttpRequest();
         xhr.open('GET', langUrl);
         xhr.overrideMimeType('application/json');
         xhr.onload = function () {
-            if (xhr.status < 400) {
-                window[name] = JSON.parse(xhr.responseText);
-                DataManager.onLoad(window[name]);
-            } else {
-                loadFallback();
+            var text = xhr.responseText;
+            if (text) {
+                try {
+                    window[name] = JSON.parse(text);
+                    DataManager.onLoad(window[name]);
+                    return;
+                } catch (e) {}
             }
+            loadFallback();
         };
         xhr.onerror = loadFallback;
         window[name] = null;
         xhr.send();
 
         function loadFallback() {
-            var xhr2 = new XMLHttpRequest();
-            xhr2.open('GET', fallUrl);
-            xhr2.overrideMimeType('application/json');
-            xhr2.onload = function () {
-                if (xhr2.status < 400) {
-                    window[name] = JSON.parse(xhr2.responseText);
-                    DataManager.onLoad(window[name]);
-                } else {
-                    DataManager._errorUrl = DataManager._errorUrl || fallUrl;
-                }
-            };
-            xhr2.onerror = function () {
-                DataManager._errorUrl = DataManager._errorUrl || fallUrl;
-            };
-            xhr2.send();
+            _DM_loadDataFile.call(DataManager, name, src);
         }
     };
 
