@@ -73,9 +73,15 @@
 
     // Files that have language-specific versions under data/lang/{code}/
     var _langFiles = {
-        'System.json': true
+        'System.json':  true,
+        'Skills.json':  true,
+        'Items.json':   true,
+        'Weapons.json': true,
+        'Armors.json':  true,
+        'Enemies.json': true,
+        'States.json':  true
         // Add more here as translations are created:
-        // 'Actors.json': true, 'Skills.json': true, etc.
+        // 'Actors.json': true, 'Classes.json': true
     };
 
     // ============================================================
