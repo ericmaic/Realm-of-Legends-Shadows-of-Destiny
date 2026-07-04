@@ -43,8 +43,7 @@
     LM.switchTo = function (code) {
         ConfigManager.language = code;
         ConfigManager.save();
-        DataManager.loadDatabase();
-        SceneManager.goto(Scene_Title);
+        location.reload();
     };
 
     LM.confirmText = function (next) {
