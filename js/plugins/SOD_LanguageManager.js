@@ -67,8 +67,10 @@
         this.language = (config.language !== undefined) ? config.language : defaultLang;
     };
 
-    // Initialise before config is loaded
+    // Initialise: set default, then immediately load saved config so that
+    // ConfigManager.language is correct before DataManager.loadDatabase() runs.
     ConfigManager.language = defaultLang;
+    ConfigManager.load();
 
     // ============================================================
     // Plugin text i18n – patches third-party plugin variables
