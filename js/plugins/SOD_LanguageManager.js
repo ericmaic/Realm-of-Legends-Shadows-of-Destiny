@@ -70,6 +70,107 @@
     // Initialise before config is loaded
     ConfigManager.language = defaultLang;
 
+    // ============================================================
+    // Plugin text i18n – patches third-party plugin variables
+    // ============================================================
+    var PLUGIN_TEXTS = {
+        'en': {
+            picGallery:      'Picture Gallery',
+            picCompletion:   'Completion',
+            credits:         'Credits',
+            questLog:        'Quest Log',
+            questActive:     'Active',
+            questComplete:   'Complete',
+            questFailed:     'Failed',
+            questDesc:       'Details',
+            questObj:        'Objectives',
+            questDiff:       'Level',
+            questNoTrack:    'No Quest Selected',
+            questCategories: 'Main Quests|#ffcc66,Side Quests|#ffff99,Crafting Quests|#ccccff',
+            popQA:  'New Quest:',
+            popQC:  'Quest Completed:',
+            popQF:  'Quest Failed:',
+            popOA:  'New Objective:',
+            popOC:  'Objective Completed:',
+            popOF:  'Objective Failed:'
+        },
+        'zh': {
+            picGallery:      '图片回廊',
+            picCompletion:   '完成度',
+            credits:         '制作人员',
+            questLog:        '任务日志',
+            questActive:     '进行中',
+            questComplete:   '已完成',
+            questFailed:     '已失败',
+            questDesc:       '详情',
+            questObj:        '目标',
+            questDiff:       '难度',
+            questNoTrack:    '无选中任务',
+            questCategories: '主线任务|#ffcc66,支线任务|#ffff99,合成任务|#ccccff',
+            popQA:  '新任务：',
+            popQC:  '任务完成：',
+            popQF:  '任务失败：',
+            popOA:  '新目标：',
+            popOC:  '目标完成：',
+            popOF:  '目标失败：'
+        }
+    };
+
+    LM.applyPluginTexts = function () {
+        var lang = ConfigManager.language || defaultLang;
+        var t = PLUGIN_TEXTS[lang] || PLUGIN_TEXTS['en'];
+
+        // MOG_PictureGallery
+        if (typeof Moghunter !== 'undefined') {
+            if (Moghunter.picturegallery_command_name !== undefined)
+                Moghunter.picturegallery_command_name = t.picGallery;
+            if (Moghunter.picturegallery_completion_word !== undefined)
+                Moghunter.picturegallery_completion_word = t.picCompletion;
+        }
+
+        // MOG_Credits
+        if (typeof Moghunter !== 'undefined' && Moghunter.credits_commandName !== undefined)
+            Moghunter.credits_commandName = t.credits;
+
+        // Galv_QuestLog
+        if (typeof Galv !== 'undefined' && Galv.QUEST) {
+            Galv.QUEST.menuCmd       = t.questLog;
+            Galv.QUEST.txtCmdActive  = t.questActive;
+            Galv.QUEST.txtCmdComplete= t.questComplete;
+            Galv.QUEST.txtCmdFailed  = t.questFailed;
+            Galv.QUEST.txtDesc       = t.questDesc;
+            Galv.QUEST.txtObj        = t.questObj;
+            Galv.QUEST.txtDiff       = t.questDiff;
+            Galv.QUEST.txtNoTrack    = t.questNoTrack;
+            Galv.QUEST.txtPopQA      = t.popQA;
+            Galv.QUEST.txtPopQC      = t.popQC;
+            Galv.QUEST.txtPopQF      = t.popQF;
+            Galv.QUEST.txtPopOA      = t.popOA;
+            Galv.QUEST.txtPopOC      = t.popOC;
+            Galv.QUEST.txtPopOF      = t.popOF;
+            // Rebuild categories
+            Galv.QUEST.categories = [];
+            var cats = t.questCategories.split(',');
+            for (var i = 0; i < cats.length; i++) {
+                var data = cats[i].split('|');
+                Galv.QUEST.categories[i] = { id: i, name: data[0], color: data[1] };
+            }
+        }
+    };
+
+    // Apply before Scene_Title and Scene_Menu build their windows
+    var _ST_create = Scene_Title.prototype.create;
+    Scene_Title.prototype.create = function () {
+        LM.applyPluginTexts();
+        _ST_create.call(this);
+    };
+
+    var _SM_create = Scene_Menu.prototype.create;
+    Scene_Menu.prototype.create = function () {
+        LM.applyPluginTexts();
+        _SM_create.call(this);
+    };
+
     // Files that have language-specific versions under data/lang/{code}/
     var _langFiles = {
         'System.json':  true,
